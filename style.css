@@ -40,10 +40,15 @@ html {
 .card button {
   outline: none;
   border-radius: 1.5rem;
-  border: 0.5rem solid var(--very-light-gray);
-  padding: 0.5rem 1.5rem;
+  border: 0.15rem solid var(--very-light-gray);
+  padding: 0.6rem 1.5rem;
   text-transform: capitalize;
   font-size: 1.05rem;
+  background-color: var(--very-light-gray);
+}
+.card button:hover {
+  background-color: transparent;
+  color: var(--very-light-gray);
 }
 .sedans {
   border-radius: 0.5rem 0.5rem 0 0;
@@ -59,13 +64,34 @@ html {
   color: var(--dark-cyan);
 }
 .luxury {
-  border-radius: 0 0 0.5rem 0.5rem;
+  /* border-radius: 0 0 0.5rem 0.5rem; */
   background-color: var(--very-dark-cyan);
 }
 .luxury button {
   color: var(--very-dark-cyan);
 }
-@media screen and (min-width: 500px) {
+
+@media screen and (min-width: 626px) and (max-width: 917px) {
+  .card-container {
+    width: 90vw;
+  }
+  .card {
+    width: 34%;
+  }
+  .sedans {
+    border-radius: 0.5rem 0 0 0;
+  }
+  .sedans p {
+    padding-right: 1%;
+  }
+  .suvs {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .luxury {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+@media screen and (min-width: 918px) {
   .full-container {
     display: flex;
     min-height: 95vh;
